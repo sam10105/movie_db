@@ -1,0 +1,29 @@
+{
+  "name": "movie_db",
+  "version": "1.0.0",
+  "description": "A graphql endpoint for movie_db",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev --transpileOnly --no-notify src",
+    "prebuild": "rm -rf dist",
+    "build": "tsc",
+    "prestart": "yarn build",
+    "start": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "Sam Kasyoki",
+  "engines": {
+    "node": "12.x"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "apollo-datasource-rest": "^0.9.2",
+    "apollo-server": "^2.14.4",
+    "graphql": "14.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.13",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.9.5"
+  }
+}
