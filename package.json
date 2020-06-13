@@ -7,7 +7,6 @@
     "dev": "ts-node-dev --transpileOnly --no-notify src",
     "prebuild": "rm -rf dist",
     "build": "tsc",
-    "prestart": "yarn build",
     "start": "node dist/index.js"
   },
   "keywords": [],
