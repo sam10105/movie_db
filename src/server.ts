@@ -3,7 +3,7 @@ import { ApolloServer } from 'apollo-server';
 import typeDefs from './schema';
 import resolvers from './resolvers';
 import { MovieApi } from './datasources';
-import { BASE_URL, API_KEY } from './config';
+import { API_KEY } from './config';
 
 const createServer = () => {
   const server = new ApolloServer({
@@ -12,6 +12,8 @@ const createServer = () => {
     }),
     typeDefs,
     resolvers,
+    introspection: true,
+    playground: true,
     dataSources: () => ({
       movie: new MovieApi(),
     }),

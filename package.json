@@ -1,7 +1,7 @@
 {
-  "name": "movie_db",
+  "name": "tmdb_graphql",
   "version": "1.0.0",
-  "description": "A graphql endpoint for movie_db",
+  "description": "GraphQL version of The Movie Database (TMDb) api",
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev --transpileOnly --no-notify src",
