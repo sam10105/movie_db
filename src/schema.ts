@@ -36,6 +36,23 @@ const typeDefs = gql`
       """
       region: String
     ): [Movie]!
+    """
+    Get the top rated movies on TMDb.
+    """
+    topRated(
+      """
+      Pass a ISO 639-1 value to display translated data for the fields that support it.
+      """
+      language: String
+      """
+      Specify which page to query.
+      """
+      page: Int
+      """
+      Specify a ISO 3166-1 code to filter release dates. Must be uppercase.
+      """
+      region: String
+    ): [Movie]!
   }
 `;
 

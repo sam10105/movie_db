@@ -20,6 +20,14 @@ class MovieApi extends RESTDataSource {
       : [];
   }
 
+  async getTopRatedMovies(args: any) {
+    const { results } = await this.get('/movie/top_rated', args);
+
+    return Array.isArray(results)
+      ? results.map(movie => this.movieReducer(movie))
+      : [];
+  }
+
   movieReducer(movie: Movie) {
     return {
       posterPath: movie.poster_path,
