@@ -53,6 +53,25 @@ const typeDefs = gql`
       """
       region: String
     ): [Movie]!
+    """
+    Get a list of upcoming movies in theatres. This is a release type query that looks for all movies that have a release type of 2 or 3 within the specified date range.
+
+    You can optionally specify a region prameter which will narrow the search to only look for theatrical release dates within the specified country.
+    """
+    upcoming(
+      """
+      Pass a ISO 639-1 value to display translated data for the fields that support it.
+      """
+      language: String
+      """
+      Specify which page to query.
+      """
+      page: Int
+      """
+      Specify a ISO 3166-1 code to filter release dates. Must be uppercase.
+      """
+      region: String
+    ): [Movie]!
   }
 `;
 
